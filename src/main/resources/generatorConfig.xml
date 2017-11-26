@@ -42,7 +42,7 @@
     </javaClientGenerator>
 
     <!--配合CodeGenerator的专用写法，带*的会认为tableName是前缀-->
-    <table tableName="crud*"  >
+    <table tableName="crud_*"  >
       <!--主键生成方式-->
       <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
     </table>
