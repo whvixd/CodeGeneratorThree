@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Condition;
 import ${basePackage}.entity.${modelNameUpperCamel};
 import ${basePackage}.repository.${modelNameUpperCamel}Mapper;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;

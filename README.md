@@ -1,11 +1,8 @@
+### ä»£ç ç”Ÿæˆå™¨
 
+> æ ¹æ®æ•°æ®è¡¨åç§°ç”Ÿæˆå¯¹åº”çš„Modelã€Mapperã€Serviceã€Controllerç®€åŒ–å¼€å‘,ä¸»è¦åˆ©ç”¨freemarkerä½œä¸ºæ¨¡ç‰ˆç”ŸæˆServiceå’ŒControllerã€‚
 
-
-### ´úÂëÉú³ÉÆ÷
-
-> ¸ù¾İÊı¾İ±íÃû³ÆÉú³É¶ÔÓ¦µÄModel¡¢Mapper¡¢Service¡¢Controller¼ò»¯¿ª·¢,Ö÷ÒªÀûÓÃfreemarker×÷ÎªÄ£°æÉú³ÉServiceºÍController¡£
-
-##### 1. Ê×ÏÈÀ´¿´¿´pom.xmlËùĞèÒÀÀµµÄjar°ü
+##### 1. é¦–å…ˆæ¥çœ‹çœ‹pom.xmlæ‰€éœ€ä¾èµ–çš„jaråŒ…
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -36,7 +33,7 @@
 
   <dependencies>
 
-    <!--´úÂëÉú³ÉÆ÷-->
+    <!--ä»£ç ç”Ÿæˆå™¨-->
     <dependency>
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
@@ -139,10 +136,10 @@
 </project>
 
 ```
-##### 2. ĞèÒªÁ½¸öÅäÖÃÎÄ¼şapplication-dev.propertiesºÍgeneratorConfig.xml
+##### 2. éœ€è¦ä¸¤ä¸ªé…ç½®æ–‡ä»¶application-dev.propertieså’ŒgeneratorConfig.xml
 > application-dev.properties
 ```
-#-------ÏîÄ¿ËùÔÚµÄ¸ùÄ¿Â¼---------
+#-------é¡¹ç›®æ‰€åœ¨çš„æ ¹ç›®å½•---------
 project.path=D:/code/project/CodeGeneratorThree
 
 java.path=/src/main/java
@@ -154,10 +151,10 @@ gen.context.id=crud
 gen.author=qilixiang
 rest=true
 
-#-------Mapper½Ó¿ÚËùÔÚµÄ°ü---------
+#-------Mapperæ¥å£æ‰€åœ¨çš„åŒ…---------
 mappers=top.qilixiang.crud.base.Mapper
 
-#-------Êı¾İ¿âµÄÅäÖÃ---------
+#-------æ•°æ®åº“çš„é…ç½®---------
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/school?useUnicode=true&characterEncoding=utf8
 jdbc.username=root
@@ -169,7 +166,7 @@ jdbc.password=123456
 ```
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE generatorConfiguration PUBLIC
     "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> <!-- ÅäÖÃÉú³ÉÆ÷ -->
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> <!-- é…ç½®ç”Ÿæˆå™¨ -->
 <generatorConfiguration>
   <properties resource="application-dev.properties"/>
 
@@ -181,9 +178,9 @@ jdbc.password=123456
     <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
     <property name="beginningDelimiter" value="${db.obj.Delimiter}"/>
     <property name="endingDelimiter" value="${db.obj.Delimiter}"/>
-    <!-- mergeable ÎªtrueÊ±£¬¿ÉºÏ²¢£¬Îªfalse£¬ÖØĞÂÉú³ÉµÄÊ±²ÉÓÃ¸²¸Ç-->
+    <!-- mergeable ä¸ºtrueæ—¶ï¼Œå¯åˆå¹¶ï¼Œä¸ºfalseï¼Œé‡æ–°ç”Ÿæˆçš„æ—¶é‡‡ç”¨è¦†ç›–-->
     <property name="mergeable" value="false"></property>
-    <!--Í¨ÓÃmapperµÄ²å¼ş-->
+    <!--é€šç”¨mapperçš„æ’ä»¶-->
     <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
       <property name="mappers" value="${mappers}"/>
     </plugin>
@@ -210,9 +207,9 @@ jdbc.password=123456
       <property name="enableSubPackages" value="false"/>
     </javaClientGenerator>
 
-    <!--ÅäºÏCodeGeneratorµÄ×¨ÓÃĞ´·¨£¬´ø*µÄ»áÈÏÎªtableNameÊÇÇ°×º-->
+    <!--é…åˆCodeGeneratorçš„ä¸“ç”¨å†™æ³•ï¼Œå¸¦*çš„ä¼šè®¤ä¸ºtableNameæ˜¯å‰ç¼€-->
     <table tableName="crud_*"  >
-      <!--Ö÷¼üÉú³É·½Ê½-->
+      <!--ä¸»é”®ç”Ÿæˆæ–¹å¼-->
       <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
     </table>
 
@@ -221,12 +218,12 @@ jdbc.password=123456
 
 ```
 
-**×¢Òâ£º**
+**æ³¨æ„ï¼š**
 
-- application-dev.propertiesÖĞgen.context.id=crudÒªºÍgeneratorConfig.xmlÖĞ<context id="crud */>"Ò»Ñù
-- CodeGeneratorÒªÇóÊı¾İ¿âµÄ±íÃûÇ°×ºÒªÒ»ÖÂ
+- application-dev.propertiesä¸­gen.context.id=crudè¦å’ŒgeneratorConfig.xmlä¸­<context id="crud */>"ä¸€æ ·
+- CodeGeneratorè¦æ±‚æ•°æ®åº“çš„è¡¨åå‰ç¼€è¦ä¸€è‡´
 
-##### 3. ĞèÒª´´½¨freemarkerÄ£°æÀ´Éú³ÉServiceºÍControllerµÄ¸ñÊ½
+##### 3. éœ€è¦åˆ›å»ºfreemarkeræ¨¡ç‰ˆæ¥ç”ŸæˆServiceå’ŒControllerçš„æ ¼å¼
 
 > service.ftl
 ```
@@ -247,13 +244,13 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 /**
-* »ùÓÚÍ¨ÓÃMyBatis Mapper²å¼şµÄService½Ó¿ÚµÄÊµÏÖ
+* åŸºäºé€šç”¨MyBatis Mapperæ’ä»¶çš„Serviceæ¥å£çš„å®ç°
 */
 public class ${modelNameUpperCamel}Service{
     @Autowired
     protected ${modelNameUpperCamel}Mapper mapper;
 
-    private Class<${modelNameUpperCamel}> modelClass;    // µ±Ç°·ºĞÍÕæÊµÀàĞÍµÄClass
+    private Class<${modelNameUpperCamel}> modelClass;    // å½“å‰æ³›å‹çœŸå®ç±»å‹çš„Class
 
     public ${modelNameUpperCamel}Service() {
         ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();
@@ -291,7 +288,7 @@ public class ${modelNameUpperCamel}Service{
 
 
     public ${modelNameUpperCamel} findBy(String property, Object value) throws TooManyResultsException {
-        // ÊÖ¶¯ÉèÖÃÊı¾İÔ´
+        // æ‰‹åŠ¨è®¾ç½®æ•°æ®æº
         // DataSourceKeyHolder.setDbType(DataSourceKeyHolder.DataSourceType.MASTER);
         try {
             ${modelNameUpperCamel} model = modelClass.newInstance();
@@ -352,7 +349,7 @@ import javax.annotation.Resource;
 public class ${modelNameUpperCamel}API {
 
     /**
-     * ²Ù×÷³É¹¦
+     * æ“ä½œæˆåŠŸ
      */
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
 
@@ -392,7 +389,7 @@ public class ${modelNameUpperCamel}API {
 ```
 
 
-##### 4. ´´½¨CodeGeneratorÀà
+##### 4. åˆ›å»ºCodeGeneratorç±»
 ```
 package top.qilixiang;
 
@@ -420,9 +417,9 @@ import java.util.*;
 import java.util.Date;
 
 /**
- * ´úÂëÉú³ÉÆ÷£¬¸ù¾İÊı¾İ±íÃû³ÆÉú³É¶ÔÓ¦µÄModel¡¢Mapper¡¢Service¡¢Controller¼ò»¯¿ª·¢¡£<br/>
- * ¸Ã¹¤¾ßÀàĞèÒªMBGµÄÅäÖÃÎÄ¼şºÍpropertiesÊôĞÔÎÄ¼ş<br />
- * Ê¹ÓÃ·½·¨²Î¿¼http://www.qilixiang1118.top
+ * ä»£ç ç”Ÿæˆå™¨ï¼Œæ ¹æ®æ•°æ®è¡¨åç§°ç”Ÿæˆå¯¹åº”çš„Modelã€Mapperã€Serviceã€Controllerç®€åŒ–å¼€å‘ã€‚<br/>
+ * è¯¥å·¥å…·ç±»éœ€è¦MBGçš„é…ç½®æ–‡ä»¶å’Œpropertieså±æ€§æ–‡ä»¶<br />
+ * ä½¿ç”¨æ–¹æ³•å‚è€ƒhttp://www.qilixiang1118.top
  *
  * @author qilixiang
  */
@@ -477,7 +474,7 @@ public class CodeGenerator {
     }
 
     private void init() {
-        Resource resource = new ClassPathResource(propertiesPath);//ClassPathResource()¼ÓÔØÊÇµÄresourcesÄ¿Â¼ÏÂµÄÅäÖÃÎÄ¼ş
+        Resource resource = new ClassPathResource(propertiesPath);//ClassPathResource()åŠ è½½æ˜¯çš„resourcesç›®å½•ä¸‹çš„é…ç½®æ–‡ä»¶
         Properties props = new Properties();
         try {
             props.load(resource.getInputStream());
@@ -502,13 +499,13 @@ public class CodeGenerator {
             if (resourcePathFile.exists() == false) {
                 resourcePathFile.mkdirs();
             }
-            BASE_PACKAGE_PATH = "/" + BASE_PACKAGE.replaceAll("\\.", "/") + "/";//ÏîÄ¿»ù´¡°üÂ·¾¶
-            PACKAGE_PATH_SERVICE = BASE_PACKAGE_PATH + "service/";//Éú³ÉµÄService´æ·ÅÂ·¾¶;
-            // PACKAGE_PATH_SERVICE_IMPL = BASE_PACKAGE_PATH + "/service/impl/";//Éú³ÉµÄServiceÊµÏÖ´æ·ÅÂ·¾¶ ;
+            BASE_PACKAGE_PATH = "/" + BASE_PACKAGE.replaceAll("\\.", "/") + "/";//é¡¹ç›®åŸºç¡€åŒ…è·¯å¾„
+            PACKAGE_PATH_SERVICE = BASE_PACKAGE_PATH + "service/";//ç”Ÿæˆçš„Serviceå­˜æ”¾è·¯å¾„;
+            // PACKAGE_PATH_SERVICE_IMPL = BASE_PACKAGE_PATH + "/service/impl/";//ç”Ÿæˆçš„Serviceå®ç°å­˜æ”¾è·¯å¾„ ;
             if (need_rest)
-                PACKAGE_PATH_CONTROLLER = BASE_PACKAGE_PATH + "/api/";//Éú³ÉµÄAPI´æ·ÅÂ·¾¶;
+                PACKAGE_PATH_CONTROLLER = BASE_PACKAGE_PATH + "/api/";//ç”Ÿæˆçš„APIå­˜æ”¾è·¯å¾„;
             else
-                PACKAGE_PATH_CONTROLLER = BASE_PACKAGE_PATH + "/web/";//Éú³ÉµÄController´æ·ÅÂ·¾¶;
+                PACKAGE_PATH_CONTROLLER = BASE_PACKAGE_PATH + "/web/";//ç”Ÿæˆçš„Controllerå­˜æ”¾è·¯å¾„;
 
             JDBC_DIVER_CLASS_NAME = props.getProperty("jdbc.driver").trim();
             JDBC_URL = props.getProperty("jdbc.url").trim();
@@ -518,12 +515,12 @@ public class CodeGenerator {
 
             ConfigurationParser cp = new ConfigurationParser(WARNINGS);
             config = cp.parseConfiguration(new ClassPathResource(configPath).getInputStream());
-            context = config.getContext(CONTEXTID);//CONTEXTIDÓëgeneratorConfig.xmlÖĞµÄ<context id=""/>Ò»ÖÂ
+            context = config.getContext(CONTEXTID);//CONTEXTIDä¸generatorConfig.xmlä¸­çš„<context id=""/>ä¸€è‡´
 
             //load jdbc driver
             Class.forName(JDBC_DIVER_CLASS_NAME);
         } catch (Exception e) {
-            throw new RuntimeException();//Ö±½ÓÅ×³öÔËĞĞÊ±Òì³£
+            throw new RuntimeException();//ç›´æ¥æŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸
         }
     }
 
@@ -533,16 +530,16 @@ public class CodeGenerator {
             MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, CALLBACK, WARNINGS);
             myBatisGenerator.generate(null);
             if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("´úÂë³É¹¦Éú³É£¬Â·¾¶£º" + PROJECT_PATH);
+                LOGGER.debug("ä»£ç æˆåŠŸç”Ÿæˆï¼Œè·¯å¾„ï¼š" + PROJECT_PATH);
             }
         } catch (InvalidConfigurationException | SQLException | IOException | InterruptedException e) {
-            throw new RuntimeException();//Ö±½ÓÅ×³öÔËĞĞÊ±Òì³£
+            throw new RuntimeException();//ç›´æ¥æŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸
         }
     }
 
 
     /**
-     * ½âÎöËùÓĞtableÅäÖÃ£¬ÕıÈ·µØºÍÊı¾İ¿âÖĞµÄ±í¶ÔÓ¦ÆğÀ´£¬ĞÎ³ÉĞÂµÄTableConfigurationÁĞ±í
+     * è§£ææ‰€æœ‰tableé…ç½®ï¼Œæ­£ç¡®åœ°å’Œæ•°æ®åº“ä¸­çš„è¡¨å¯¹åº”èµ·æ¥ï¼Œå½¢æˆæ–°çš„TableConfigurationåˆ—è¡¨
      */
     private void dealTables() {
         if (!dealed) {
@@ -559,7 +556,7 @@ public class CodeGenerator {
     }
 
     /**
-     * Ä£°åÎÄ¼şµÄÂ·¾¶
+     * æ¨¡æ¿æ–‡ä»¶çš„è·¯å¾„
      *
      * @param templateDir
      */
@@ -589,8 +586,8 @@ public class CodeGenerator {
                 }
                 freemarkerCfg.getTemplate("service.ftl").process(data, new FileWriter(file));
                 if (LOGGER.isDebugEnabled()) {
-                    LOGGER.debug("Â·¾¶£º" + PROJECT_PATH);
-                    LOGGER.debug(javaFileName + "Éú³É³É¹¦");
+                    LOGGER.debug("è·¯å¾„ï¼š" + PROJECT_PATH);
+                    LOGGER.debug(javaFileName + "ç”ŸæˆæˆåŠŸ");
                 }
                 // File file1 = new File( PROJECT_PATH + JAVA_PATH + PACKAGE_PATH_SERVICE_IMPL + domainName + "ServiceImpl.java" );
                 // if (!file1.getParentFile().exists()) {
@@ -598,20 +595,20 @@ public class CodeGenerator {
                 // }
                 // freemarkerCfg.getTemplate( "service-impl.ftl" ).process( data,
                 //     new FileWriter( file1 ) );
-                // System.out.println( domainName + "ServiceImpl.java Éú³É³É¹¦" );
+                // System.out.println( domainName + "ServiceImpl.java ç”ŸæˆæˆåŠŸ" );
 
                 File file2 = new File(PROJECT_PATH + JAVA_PATH + PACKAGE_PATH_CONTROLLER + domainName + (need_rest ? "API" : "Controller") + ".java");
                 if (!file2.getParentFile().exists()) {
                     file2.getParentFile().mkdirs();
                 }
-                //Êı¾İ¿â±íÃ÷Ç°×îºÃ¼ÓÒ»¸ö±êÊ¶·û£¬ÕâÊÇCodeGeneratorµÄ¹Ì¶¨Ğ´·¨
+                //æ•°æ®åº“è¡¨æ˜å‰æœ€å¥½åŠ ä¸€ä¸ªæ ‡è¯†ç¬¦ï¼Œè¿™æ˜¯CodeGeneratorçš„å›ºå®šå†™æ³•
                 freemarkerCfg.getTemplate(CONTROLLER_FTL).process(data, new FileWriter(file2));
                 if (LOGGER.isDebugEnabled()) {
-                    LOGGER.debug("Â·¾¶£º" + PROJECT_PATH);
-                    LOGGER.debug(domainName + (need_rest ? "API" : "Controller") + ".java Éú³É³É¹¦");
+                    LOGGER.debug("è·¯å¾„ï¼š" + PROJECT_PATH);
+                    LOGGER.debug(domainName + (need_rest ? "API" : "Controller") + ".java ç”ŸæˆæˆåŠŸ");
                 }
             } catch (Exception e) {
-                throw new RuntimeException();//Ö±½ÓÅ×³öÔËĞĞÊ±Òì³£
+                throw new RuntimeException();//ç›´æ¥æŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸
             }
         }
     }
@@ -627,7 +624,7 @@ public class CodeGenerator {
     }
 
     /**
-     * Ö»Á¬Ò»´ÎÊı¾İ¿â»ñµÃËùÓĞµÄ±íÃû£¬»ñÈ¡±íÃûºó¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+     * åªè¿ä¸€æ¬¡æ•°æ®åº“è·å¾—æ‰€æœ‰çš„è¡¨åï¼Œè·å–è¡¨ååå…³é—­æ•°æ®åº“è¿æ¥
      *
      * @return
      */
@@ -642,61 +639,61 @@ public class CodeGenerator {
             }
         } catch (Exception e) {
             LOGGER.error(JDBC_URL + "::" + JDBC_USERNAME + "::" + JDBC_PASSWORD, e);
-            throw new RuntimeException();//Ö±½ÓÅ×³öÔËĞĞÊ±Òì³£
+            throw new RuntimeException();//ç›´æ¥æŠ›å‡ºè¿è¡Œæ—¶å¼‚å¸¸
         }
         return dbTableNameSet;
     }
 
     /**
-     * ¸ù¾İÔ­TableÅäÖÃÖĞÊÇ·ñÓĞÍ¨Åä·ûÀ´½âÎöÊı¾İ¿âÖĞµÄ±íÃû£¬½«·ûºÏÒªÇóµÄ±íÅäÖÃºó¼ÓÈëĞÂÅäÖÃÈİÆ÷
+     * æ ¹æ®åŸTableé…ç½®ä¸­æ˜¯å¦æœ‰é€šé…ç¬¦æ¥è§£ææ•°æ®åº“ä¸­çš„è¡¨åï¼Œå°†ç¬¦åˆè¦æ±‚çš„è¡¨é…ç½®ååŠ å…¥æ–°é…ç½®å®¹å™¨
      *
-     * @param newTcs         ĞÂTableÅäÖÃÈİÆ÷
-     * @param dbTableNameSet Êı¾İ¿â±íÃûÈİÆ÷
-     * @param oldTc          Ô­TableÅäÖÃ
+     * @param newTcs         æ–°Tableé…ç½®å®¹å™¨
+     * @param dbTableNameSet æ•°æ®åº“è¡¨åå®¹å™¨
+     * @param oldTc          åŸTableé…ç½®
      */
     private void dealTable(Set<TableConfiguration> newTcs, Set<String> dbTableNameSet, TableConfiguration oldTc) {
         String tcTableName = oldTc.getTableName();
-        // ·ÖÁ½Àà£¬´øÍ¨Åä·ûºÍ²»´øÍ¨Åä·û
+        // åˆ†ä¸¤ç±»ï¼Œå¸¦é€šé…ç¬¦å’Œä¸å¸¦é€šé…ç¬¦
         if (tcTableName.contains("*")) {
             Iterator<String> dbTableNameIter = dbTableNameSet.iterator();
             while (dbTableNameIter.hasNext()) {
                 String dbTableName = dbTableNameIter.next();
-                // ÅäÖÃÖĞ±íÃûÎª*£¬ÔòËùÓĞ±í¶¼·ûºÏÒªÇó
+                // é…ç½®ä¸­è¡¨åä¸º*ï¼Œåˆ™æ‰€æœ‰è¡¨éƒ½ç¬¦åˆè¦æ±‚
                 if (tcTableName.equals("*")) {
                     newTcs.add(configTable(dbTableName, null, oldTc.getGeneratedKey()));
                 } else {
                     int starIndex = tcTableName.indexOf("*");
-                    //½ØÈ¡Ç°×º
+                    //æˆªå–å‰ç¼€
                     String prefix = tcTableName.substring(0, starIndex);
-                    //Âú×ãÇ°×ºÒªÇó
+                    //æ»¡è¶³å‰ç¼€è¦æ±‚
                     if (dbTableName.startsWith(prefix)) {
                         newTcs.add(configTable(dbTableName, prefix, oldTc.getGeneratedKey()));
                     }
                 }
             }
-        } else { // xmlÖĞÅäÖÃµÄ¾ÍÊÇÒªÊ¹ÓÃµÄ±íÃûºÍdomain
+        } else { // xmlä¸­é…ç½®çš„å°±æ˜¯è¦ä½¿ç”¨çš„è¡¨åå’Œdomain
             if (newTcs.contains(tcTableName)) {
                 newTcs.add(oldTc);
             } else {
-                LOGGER.warn("Êı¾İ¿âÖĞ²»´æÔÚ´Ë±í£º%s", tcTableName);
+                LOGGER.warn("æ•°æ®åº“ä¸­ä¸å­˜åœ¨æ­¤è¡¨ï¼š%s", tcTableName);
             }
         }
 
     }
 
     /**
-     * ÅäÖÃĞÂµÄTableConfiguration
+     * é…ç½®æ–°çš„TableConfiguration
      *
-     * @param tableName    Ô­Éú±íÃû
-     * @param tablePrefix  ´ıÈ¥³ıµÄÇ°×º
-     * @param generatedKey Ö÷¼üÉú³É·½Ê½
+     * @param tableName    åŸç”Ÿè¡¨å
+     * @param tablePrefix  å¾…å»é™¤çš„å‰ç¼€
+     * @param generatedKey ä¸»é”®ç”Ÿæˆæ–¹å¼
      * @return
      */
     private TableConfiguration configTable(String tableName, String tablePrefix, GeneratedKey generatedKey) {
         TableConfiguration tableConfiguration = new TableConfiguration(context);
         tableConfiguration.setTableName(tableName);
         tableConfiguration.setGeneratedKey(generatedKey);
-        // ±íÇ°×º
+        // è¡¨å‰ç¼€
         if (StringUtils.isNotEmpty(tablePrefix)) {
             String domainObjectName = tableName.replaceFirst(tablePrefix, BLANK_STRING);
             tableConfiguration.setDomainObjectName(tableNameConvertUpperCamel(domainObjectName));
@@ -762,15 +759,15 @@ public class CodeGenerator {
 
 ```
 
-##### 5. ÔËĞĞCodeGenerator
+##### 5. è¿è¡ŒCodeGenerator
 
 
-![·½·¨ÈıÉú³É³É¹¦](/img/CodeGenerator/·½·¨ÈıÉú³É³É¹¦.png.png)
+![æ–¹æ³•ä¸‰ç”ŸæˆæˆåŠŸ](/img/CodeGenerator/æ–¹æ³•ä¸‰ç”ŸæˆæˆåŠŸ.png.png)
 
-¼ÈÉú³É³É¹¦¡£
+æ—¢ç”ŸæˆæˆåŠŸã€‚
 
-ÏîÄ¿Éú³ÉºóµÄÄ¿Â¼½á¹¹£º
+é¡¹ç›®ç”Ÿæˆåçš„ç›®å½•ç»“æ„ï¼š
 
-![·½·¨Èı³É¹¦Ä¿Â¼½á¹¹](/img/CodeGenerator/·½·¨Èı³É¹¦Ä¿Â¼½á¹¹.png)
+![æ–¹æ³•ä¸‰æˆåŠŸç›®å½•ç»“æ„](/img/CodeGenerator/æ–¹æ³•ä¸‰æˆåŠŸç›®å½•ç»“æ„.png)
 
-### ÓĞÁË´úÂëÉú³ÉÆ÷£¬ÒÔºó¾Í¿ÉÒÔ²»ÒªÔÚĞ´ÄÇĞ©ËÀ´úÂëÁË£¬¿ÉÒÔ×¨ĞÄÈ¥ÑĞ¾¿ÒµÎñÂß¼­ÁË¡£
+### æœ‰äº†ä»£ç ç”Ÿæˆå™¨ï¼Œä»¥åå°±å¯ä»¥ä¸è¦åœ¨å†™é‚£äº›æ­»ä»£ç äº†ï¼Œå¯ä»¥ä¸“å¿ƒå»ç ”ç©¶ä¸šåŠ¡é€»è¾‘äº†ã€‚

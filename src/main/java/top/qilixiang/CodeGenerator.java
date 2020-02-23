@@ -360,6 +360,6 @@ public class CodeGenerator {
     public static void main(String[] args) throws Exception {
         CodeGenerator codeGenerator = new CodeGenerator();
         codeGenerator.generateMapper();
-        codeGenerator.genServiceAndController("D:\\code\\project\\CodeGeneratorThree\\src\\main\\resources\\ssm_template_demo");
+        codeGenerator.genServiceAndController("/Users/whvixd/Documents/IdeaProjects/workspace/CodeGeneratorThree/src/main/resources/ssm_template_demo");
     }
 }
