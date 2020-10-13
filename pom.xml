@@ -30,7 +30,7 @@
     <mybatis.mapper.version>3.3.9</mybatis.mapper.version>
     <mybatis.pagehelper.version>5.0.4</mybatis.pagehelper.version>
     <mybatis.version>3.4.2</mybatis.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
   </properties>
 
   <dependencies>
