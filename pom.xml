@@ -25,7 +25,7 @@
     <mysql-connector-java.version>5.1.6</mysql-connector-java.version>
     <commons-lang3.version>3.5</commons-lang3.version>
     <slf4j-api.version>1.7.25</slf4j-api.version>
-    <spring.baseline.version>4.3.10.RELEASE</spring.baseline.version>
+    <spring.baseline.version>5.3.18</spring.baseline.version>
     <logback.version>1.2.3</logback.version>
     <mybatis.mapper.version>3.3.9</mybatis.mapper.version>
     <mybatis.pagehelper.version>5.0.4</mybatis.pagehelper.version>
